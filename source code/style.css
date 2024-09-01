@@ -27,6 +27,7 @@ nav {
 }
 
 nav ul {
+  flex: 0 1 auto;
   list-style: none;
   display: flex;
 }
@@ -77,7 +78,7 @@ nav ul li a {
 #about,
 #projects,
 #contact {
-  padding: 60px 20px;
+  padding: 90px 20px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -85,22 +86,27 @@ nav ul li a {
 #about h2,
 #projects h2,
 #contact h2 {
+  position: relative;
   text-align: center;
   margin-bottom: 30px;
   color: white;
 }
+
 #about p {
+  padding: 0px 120px;
   color: white;
+  position: absolute;
+  margin-bottom: 50px;
 }
 .project-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
 }
 
 .project-card {
-  width: calc(33% - 20px);
+  flex: 0 1 calc(33% - 20px);
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 8px;
@@ -109,6 +115,11 @@ nav ul li a {
 .project-card img {
   max-width: 100%;
   border-radius: 8px;
+}
+.project-card p {
+  color: purple;
+
+  font-family: "Cursive", "Comic Sans MS", "Lucida Handwriting", sans-serif;
 }
 
 footer {
@@ -165,7 +176,7 @@ form button {
 
 @media (max-width: 768px) {
   .project-card {
-    width: calc(50% - 20px);
+    flex: 0 1 calc(100% - 30px);
   }
 
   .hero-content h2 {
@@ -173,16 +184,31 @@ form button {
   }
 }
 
-@media (max-width: 500px) {
-  .project-card {
-    width: 100%;
+@media (max-width: 700px) {
+  #video-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
   }
 
-  nav ul {
-    flex-direction: column;
+  #bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
   }
+}
+.project-card {
+  width: 100%;
+}
 
-  .hero-content h2 {
-    font-size: 28px;
-  }
+nav ul {
+  flex-direction: row;
+}
+
+.hero-content h2 {
+  font-size: 28px;
 }
