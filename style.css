@@ -103,6 +103,7 @@ nav ul li a {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  align-items: center;
 }
 
 .project-card {
@@ -110,11 +111,16 @@ nav ul li a {
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 8px;
+  margin: 0 auto;
+  display: block;
 }
 
 .project-card img {
   max-width: 100%;
   border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
 }
 .project-card p {
   color: purple;
@@ -174,16 +180,6 @@ form button {
   padding-top: 20%;
 }
 
-@media (max-width: 768px) {
-  .project-card {
-    flex: 0 1 calc(100% - 30px);
-  }
-
-  .hero-content h2 {
-    font-size: 36px;
-  }
-}
-
 @media (max-width: 700px) {
   #video-section {
     position: relative;
@@ -211,4 +207,15 @@ nav ul {
 
 .hero-content h2 {
   font-size: 28px;
+}
+@media (max-width: 800px) {
+  .project-card {
+    flex: 0 1 calc(80% - 150px);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content h2 {
+    font-size: 26px;
+  }
 }
