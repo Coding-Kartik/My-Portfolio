@@ -41,33 +41,33 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
 }
-
-#hero {
-  height: 100vh;
-  background: url("images/hero.jpg") no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-content {
+/* Center the image and make it circular */
+#intro-image {
   text-align: center;
-  color: #fff;
+  padding: 90px 0;
 }
-
-.hero-content h2 {
-  font-size: 50px;
-}
-
-.hero-content p {
+#intro-image .hello p {
+  color: #ccc;
   font-size: 20px;
   margin-bottom: 30px;
 }
+#intro-image .hello h2 {
+  font-size: 40px;
+  color: #ccc;
+}
+.circular-image {
+  width: 350px; /* Set the desired width */
+  height: 350px; /* Set the desired height */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the circular area without stretching */
+  border: 3px solid #ccc;
+  object-position: center 10%; /* Optional: add a border around the image */
+}
 
-.hero-content .btn {
+.hello .btn {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #ff6600;
+  background-color: red;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -93,10 +93,8 @@ nav ul li a {
 }
 
 #about p {
-  padding: 0px 120px;
+  padding: 10px 40px;
   color: white;
-  position: absolute;
-  margin-bottom: 50px;
 }
 .project-grid {
   display: flex;
@@ -150,7 +148,7 @@ form textarea {
 
 form button {
   padding: 10px;
-  background-color: #ff6600;
+  background-color: green;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -180,7 +178,7 @@ form button {
   padding-top: 20%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   #video-section {
     position: relative;
     height: 100vh;
@@ -204,9 +202,12 @@ form button {
 nav ul {
   flex-direction: row;
 }
+#intro-image .hello p {
+  font-size: 20px;
+}
 
-.hero-content h2 {
-  font-size: 28px;
+#intro-image .hello h2 {
+  font-size: 37px;
 }
 @media (max-width: 800px) {
   .project-card {
