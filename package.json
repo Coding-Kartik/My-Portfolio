@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "dotenv": "^16.4.5",
     "git": "^0.1.5",
     "lfs": "^0.0.4",
     "track": "^0.1.1"
